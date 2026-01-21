@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AIDiffSettings">
+    <option name="showAIDiff" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d78244-f242-4196-aa87-86d1ad356ec1" name="변경" comment="html boilerplate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/bgchanger/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sample/bgchanger/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/test.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +32,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {}
+  "history": [
+    {
+      "state": "OPEN",
+      "reviewState": "AWAITING_REVIEW"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "reviewState": "AWAITING_REVIEW"
+  }
 }]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="0d0ad958-9293-4909-b5b8-7eca52c1ebab" />
@@ -111,7 +122,7 @@
       <workItem from="1761364079639" duration="596000" />
       <workItem from="1768630550633" duration="63000" />
       <workItem from="1768630626051" duration="3498000" />
-      <workItem from="1769007358931" duration="198000" />
+      <workItem from="1769007358931" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="hh">
       <option name="closed" value="true" />
@@ -145,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761289180262</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="html boilerplate">
+      <option name="closed" value="true" />
+      <created>1769007724237</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1769007724237</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
