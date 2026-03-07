@@ -1,6 +1,11 @@
 # IDE
+.idea
 .idea/
-
+.idea/*
+*.iml
+*.iws
+*.ipr
+*.iws   
 # OS files
 .DS_Store
 Thumbs.db
@@ -19,3 +24,4 @@ node_modules/
 # Build output (if build tools are added)
 dist/
 build/
+/.idea
