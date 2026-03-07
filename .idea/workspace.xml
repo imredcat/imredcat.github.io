@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d78244-f242-4196-aa87-86d1ad356ec1" name="변경" comment="html boilerplate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="41d78244-f242-4196-aa87-86d1ad356ec1" name="변경" comment="html boilerplate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,10 +96,10 @@
 }]]></component>
   <component name="RecapSpentCounter">
     <option name="endsOfQuotaMs" value="1773360053359" />
-    <option name="spentUsd" value="0.0140309995" />
+    <option name="spentUsd" value="0.018698" />
   </component>
   <component name="RecapUselessUpdatesCounter">
-    <option name="suspendCountdown" value="6" />
+    <option name="suspendCountdown" value="5" />
   </component>
   <component name="RunManager">
     <configuration name="이름이 지정되지 않았습니다" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" singleton="false" environment="&lt;환경 없음&gt;" path="">
@@ -132,7 +129,7 @@
       <workItem from="1769007358931" duration="537000" />
       <workItem from="1771853097185" duration="1228000" />
       <workItem from="1772892354645" duration="121000" />
-      <workItem from="1772892487634" duration="890000" />
+      <workItem from="1772892487634" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="hh">
       <option name="closed" value="true" />
