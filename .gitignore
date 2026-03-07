@@ -25,3 +25,5 @@ node_modules/
 dist/
 build/
 /.idea
+.idea/workspace.xml
+/.idea
