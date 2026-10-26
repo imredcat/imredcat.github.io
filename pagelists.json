@@ -10,5 +10,9 @@
     {
         "title": "Contact",
         "url": "/contact.html"
+    },
+    {
+        "title": "UNIX Command",
+        "url": "/unix_command.html"
     }
 ]
