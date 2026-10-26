@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #1a202c; /* Dark Slate Gray */
+    --card-bg-color: #2d3748; /* Slightly lighter gray */
+    --text-color: #e2e8f0; /* Light Gray */
+    --primary-color: #f6e05e; /* Yellow/Gold */
+    --secondary-color: #a0aec0; /* Muted Gray */
+    --border-color: #4a5568;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card p {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Latest Drawing Section */
+.latest-drawing .draw-date {
+    font-size: 0.9rem;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.winning-numbers, .bonus-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lotto-ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a202c;
+    box-shadow: inset -3px -3px 5px rgba(0,0,0,0.3), 2px 2px 5px rgba(255,255,255,0.2);
+}
+
+/* Color coding for balls */
+.ball-yellow { background: linear-gradient(135deg, #f9d423 0%, #ffc371 100%); }
+.ball-blue { background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%); }
+.ball-red { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
+.ball-gray { background: linear-gradient(135deg, #e0e0e0 0%, #bababa 100%); }
+.ball-green { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+.bonus-number {
+    margin-top: 20px;
+    position: relative;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+.bonus-number::before {
+    content: '+';
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-100px);
+}
+
+/* Number Generator Section */
+.generated-numbers {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#generate-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#generate-btn:hover {
+    background-color: #f7d633;
+}
+
+#generate-btn:active {
+    transform: scale(0.98);
+}
+
+/* Past Drawings Section */
+.past-drawings table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.past-drawings th, .past-drawings td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.past-drawings th {
+    background-color: #38455a;
+    color: var(--primary-color);
+}
+
+.past-drawings tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.past-drawings tbody tr:hover {
+    background-color: #38455a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .lotto-ball {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .winning-numbers, .bonus-number {
+        gap: 5px;
+    }
+
+    .bonus-number {
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .bonus-number::before {
+        position: static;
+        transform: none;
+        margin-right: 10px;
+    }
+
+    .past-drawings th, .past-drawings td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
