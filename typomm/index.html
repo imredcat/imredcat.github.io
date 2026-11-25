@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- MANDATORY: Declare support for both light and dark themes -->
     <meta name="color-scheme" content="light dark" />
-    <title>Typomm v0.2.14 — 다운로드</title>
+    <title>Typomm v0.2.15 — 다운로드</title>
     <link rel="icon" type="image/png" href="./icon.png" />
     <style>
       :root {
@@ -151,7 +151,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
         gap: 14px;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
       }
 
       .card {
@@ -243,6 +243,49 @@
         font-weight: 700;
       }
 
+      .install-cmd-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background-color: var(--code-bg);
+        border: 1px solid var(--border-color);
+        margin-top: 10px;
+      }
+
+      .install-cmd-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12.5px;
+        color: var(--text-primary);
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .copy-btn {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        border-radius: 7px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+      }
+
+      .copy-btn:hover {
+        background-color: var(--bg-subtle);
+      }
+
+      .helper-note {
+        margin: 10px 0 0;
+        font-size: 13px;
+        color: var(--text-secondary);
+      }
+
       .changelog-list,
       .guide-list {
         margin: 0;
@@ -291,7 +334,7 @@
         />
         <h1 class="hero-title">Typomm</h1>
         <p class="hero-subtitle">초고속·초경량 실시간 마크다운 에디터</p>
-        <span class="version-badge">v0.2.14 · 2026-11-25</span>
+        <span class="version-badge">v0.2.15 · 2026-11-25</span>
       </header>
 
       <section class="download-grid" aria-label="설치파일 다운로드">
@@ -301,13 +344,13 @@
               <h2 class="platform-name">macOS</h2>
               <span class="tag primary">Apple Silicon</span>
             </div>
-            <p class="platform-meta">M1~M4 (aarch64) · DMG 설치 이미지 · 40.2 MiB</p>
-            <span class="file-name">Typomm_0.2.14_aarch64.dmg</span>
+            <p class="platform-meta">M1~M4 (aarch64) · DMG 설치 이미지 · 5.7 MiB</p>
+            <span class="file-name">Typomm_0.2.15_aarch64.dmg</span>
           </div>
           <a
             class="download-btn"
-            href="./downloads/Typomm_0.2.14_aarch64.dmg"
-            download="Typomm_0.2.14_aarch64.dmg"
+            href="./downloads/Typomm_0.2.15_aarch64.dmg"
+            download="Typomm_0.2.15_aarch64.dmg"
           >
             macOS 다운로드 (.dmg)
           </a>
@@ -319,13 +362,13 @@
               <h2 class="platform-name">Windows</h2>
               <span class="tag primary">권장</span>
             </div>
-            <p class="platform-meta">64-bit (x64) · EXE 설치파일 · 36.1 MiB</p>
-            <span class="file-name">Typomm_0.2.14_x64-setup.exe</span>
+            <p class="platform-meta">64-bit (x64) · EXE 설치파일 · 3.5 MiB</p>
+            <span class="file-name">Typomm_0.2.15_x64-setup.exe</span>
           </div>
           <a
             class="download-btn"
-            href="./downloads/Typomm_0.2.14_x64-setup.exe"
-            download="Typomm_0.2.14_x64-setup.exe"
+            href="./downloads/Typomm_0.2.15_x64-setup.exe"
+            download="Typomm_0.2.15_x64-setup.exe"
           >
             Windows 다운로드 (.exe)
           </a>
@@ -337,13 +380,13 @@
               <h2 class="platform-name">Windows (MSI)</h2>
               <span class="tag">x64 패키지</span>
             </div>
-            <p class="platform-meta">64-bit (x64) · MSI 설치 패키지 · 37.1 MiB</p>
-            <span class="file-name">Typomm_0.2.14_x64_en-US.msi</span>
+            <p class="platform-meta">64-bit (x64) · MSI 설치 패키지 · 4.2 MiB</p>
+            <span class="file-name">Typomm_0.2.15_x64_en-US.msi</span>
           </div>
           <a
             class="download-btn"
-            href="./downloads/Typomm_0.2.14_x64_en-US.msi"
-            download="Typomm_0.2.14_x64_en-US.msi"
+            href="./downloads/Typomm_0.2.15_x64_en-US.msi"
+            download="Typomm_0.2.15_x64_en-US.msi"
           >
             Windows 다운로드 (.msi)
           </a>
@@ -351,13 +394,33 @@
       </section>
 
       <section class="card section-card">
-        <h2 class="section-title">v0.2.14 주요 변경 사항</h2>
+        <div class="platform-row">
+          <h2 class="section-title" style="margin: 0">macOS 원클릭 자동 설치 / 업그레이드 (권장)</h2>
+          <span class="tag primary">Gatekeeper 손상 경고 방지</span>
+        </div>
+        <p class="helper-note">
+          Apple 공증 없는 개인 빌드이므로 브라우저로 <code>.dmg</code>를 내려받아 설치하면 macOS에서 <strong>"손상되었기 때문에 열 수 없습니다"</strong> 경고가 표시될 수 있습니다. 아래 터미널 명령을 실행하면 최신 버전 다운로드, <code>/Applications/Typomm.app</code> 교체, 격리 속성(<code>com.apple.quarantine</code>) 제거까지 한 번에 완료됩니다.
+        </p>
+        <div class="install-cmd-box">
+          <code class="install-cmd-text" id="mac-install-cmd">curl -fsSL https://imredcat.github.io/typomm/install.sh | bash</code>
+          <button type="button" class="copy-btn" id="copy-install-cmd">복사</button>
+        </div>
+      </section>
+
+      <section class="card section-card">
+        <h2 class="section-title">v0.2.15 주요 변경 사항</h2>
         <ul class="changelog-list">
           <li>
-            <strong>macOS 앱 번들 서명 및 리소스 봉인 오류 수정</strong>: 내장 <code>sound/*.mp3</code> 리소스 포함 후 macOS에서 "손상되었기 때문에 열 수 없습니다" 경고가 발생하던 번들 서명 누락 문제를 <code>signingIdentity</code> 설정으로 해결했습니다.
+            <strong>배경 음악(MP3) 기능 및 리소스 제거로 초경량화</strong>: 내장 MP3 배경 사운드 플레이어와 음원 파일을 제거해 설치 파일 용량을 약 40 MiB에서 <strong>5.7 MiB (macOS) / 3.5 MiB (Windows)</strong> 수준으로 대폭 줄였습니다. (타이핑 효과음 기능은 그대로 유지됩니다.)
           </li>
           <li>
-            <strong>참고 (Gatekeeper 안내)</strong>: Apple 공증 없는 개인 빌드이므로 브라우저로 내려받은 <code>.dmg</code>에서 복사한 뒤 보안 경고가 표시될 경우, 터미널에서 <code>xattr -cr /Applications/Typomm.app</code>을 한 번 실행해 주세요.
+            <strong>내용 검색 대상 확장자 파일 열기 지원</strong>: <code>.py</code>, <code>.rs</code>, <code>.ts</code>, <code>.tsx</code>, <code>.yaml</code>, <code>.sh</code>, <code>.sql</code>, <code>.log</code> 등 설정의 내용 검색 확장자에 포함된 파일도 폴더 트리·빠른 열기·파일 열기 대화상자에서 바로 열어 편집할 수 있습니다.
+          </li>
+          <li>
+            <strong>파인더(탐색기) 파일 열기 라우팅 버그 수정</strong>: 파인더에서 파일을 열 때 새 창이 뜨면서 파일이 열리지 않던 타이밍/경로 매칭 버그를 수정했습니다. 현재 열린 폴더 안의 파일은 기존 창에서 열고, 다른 폴더의 파일은 해당 폴더를 연 상태에서 새 창으로 바로 엽니다.
+          </li>
+          <li>
+            <strong>macOS 자동 설치 스크립트 및 번들 서명 검증 개선</strong>: 터미널 원클릭 설치/업그레이드 스크립트(<code>install.sh</code>)를 추가하고 릴리즈 빌드 시 <code>codesign --verify --deep --strict</code> 검증을 수행하도록 개선했습니다.
           </li>
         </ul>
       </section>
@@ -366,7 +429,10 @@
         <h2 class="section-title">설치 안내</h2>
         <ul class="guide-list">
           <li>
-            <strong>macOS</strong>: 내려받은 <code>.dmg</code> 파일을 열어 <code>Typomm.app</code>을 <code>Applications</code> 폴더로 드래그하세요. 공증되지 않은 개인 빌드이므로 최초 실행 시 Gatekeeper 경고가 표시되면 터미널에서 <code>xattr -cr /Applications/Typomm.app</code>을 실행하거나 앱을 <code>Control + 클릭 → 열기</code>로 실행해 주세요.
+            <strong>macOS (권장: 터미널 자동 설치)</strong>: 위 <code>curl -fsSL https://imredcat.github.io/typomm/install.sh | bash</code> 명령어를 실행하면 손상 경고 없이 바로 설치/업그레이드됩니다.
+          </li>
+          <li>
+            <strong>macOS (DMG 직접 설치 시)</strong>: 내려받은 <code>.dmg</code>를 열어 <code>Typomm.app</code>을 <code>Applications</code> 폴더로 복사한 뒤, 실행 시 손상 경고가 뜨면 터미널에서 <code>xattr -cr /Applications/Typomm.app</code>을 한 번 실행해 주세요.
           </li>
           <li>
             <strong>Windows</strong>: <code>.exe</code> 또는 <code>.msi</code> 파일을 실행해 설치하세요. SmartScreen 안내가 뜨면 <code>추가 정보 → 실행</code>을 선택하면 됩니다.
@@ -378,5 +444,20 @@
         Typomm Desktop · Tauri v2 + Rust + React
       </footer>
     </main>
+    <script>
+      (function () {
+        var btn = document.getElementById("copy-install-cmd");
+        var cmd = document.getElementById("mac-install-cmd");
+        if (!btn || !cmd) return;
+        btn.addEventListener("click", function () {
+          navigator.clipboard.writeText(cmd.textContent || "").then(function () {
+            btn.textContent = "복사됨!";
+            setTimeout(function () {
+              btn.textContent = "복사";
+            }, 1800);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
