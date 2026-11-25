@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="0.2.16"
+VERSION="0.2.17"
 DMG_URL="https://imredcat.github.io/typomm/downloads/Typomm_${VERSION}_aarch64.dmg"
 TMP_DMG="$(mktemp -t typomm_install.XXXXXX).dmg"
 MOUNT_POINT="/Volumes/Typomm"
