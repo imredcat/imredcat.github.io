@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- MANDATORY: Declare support for both light and dark themes -->
     <meta name="color-scheme" content="light dark" />
-    <title>Typomm v0.2.15 — 다운로드</title>
+    <title>Typomm v0.2.16 — 다운로드</title>
     <link rel="icon" type="image/png" href="./icon.png" />
     <style>
       :root {
@@ -334,7 +334,7 @@
         />
         <h1 class="hero-title">Typomm</h1>
         <p class="hero-subtitle">초고속·초경량 실시간 마크다운 에디터</p>
-        <span class="version-badge">v0.2.15 · 2026-11-25</span>
+        <span class="version-badge">v0.2.16 · 2026-11-25</span>
       </header>
 
       <section class="download-grid" aria-label="설치파일 다운로드">
@@ -345,12 +345,12 @@
               <span class="tag primary">Apple Silicon</span>
             </div>
             <p class="platform-meta">M1~M4 (aarch64) · DMG 설치 이미지 · 5.7 MiB</p>
-            <span class="file-name">Typomm_0.2.15_aarch64.dmg</span>
+            <span class="file-name">Typomm_0.2.16_aarch64.dmg</span>
           </div>
           <a
             class="download-btn"
-            href="./downloads/Typomm_0.2.15_aarch64.dmg"
-            download="Typomm_0.2.15_aarch64.dmg"
+            href="./downloads/Typomm_0.2.16_aarch64.dmg"
+            download="Typomm_0.2.16_aarch64.dmg"
           >
             macOS 다운로드 (.dmg)
           </a>
@@ -363,12 +363,12 @@
               <span class="tag primary">권장</span>
             </div>
             <p class="platform-meta">64-bit (x64) · EXE 설치파일 · 3.5 MiB</p>
-            <span class="file-name">Typomm_0.2.15_x64-setup.exe</span>
+            <span class="file-name">Typomm_0.2.16_x64-setup.exe</span>
           </div>
           <a
             class="download-btn"
-            href="./downloads/Typomm_0.2.15_x64-setup.exe"
-            download="Typomm_0.2.15_x64-setup.exe"
+            href="./downloads/Typomm_0.2.16_x64-setup.exe"
+            download="Typomm_0.2.16_x64-setup.exe"
           >
             Windows 다운로드 (.exe)
           </a>
@@ -381,12 +381,12 @@
               <span class="tag">x64 패키지</span>
             </div>
             <p class="platform-meta">64-bit (x64) · MSI 설치 패키지 · 4.2 MiB</p>
-            <span class="file-name">Typomm_0.2.15_x64_en-US.msi</span>
+            <span class="file-name">Typomm_0.2.16_x64_en-US.msi</span>
           </div>
           <a
             class="download-btn"
-            href="./downloads/Typomm_0.2.15_x64_en-US.msi"
-            download="Typomm_0.2.15_x64_en-US.msi"
+            href="./downloads/Typomm_0.2.16_x64_en-US.msi"
+            download="Typomm_0.2.16_x64_en-US.msi"
           >
             Windows 다운로드 (.msi)
           </a>
@@ -408,19 +408,16 @@
       </section>
 
       <section class="card section-card">
-        <h2 class="section-title">v0.2.15 주요 변경 사항</h2>
+        <h2 class="section-title">v0.2.16 주요 변경 사항</h2>
         <ul class="changelog-list">
           <li>
-            <strong>배경 음악(MP3) 기능 및 리소스 제거로 초경량화</strong>: 내장 MP3 배경 사운드 플레이어와 음원 파일을 제거해 설치 파일 용량을 약 40 MiB에서 <strong>5.7 MiB (macOS) / 3.5 MiB (Windows)</strong> 수준으로 대폭 줄였습니다. (타이핑 효과음 기능은 그대로 유지됩니다.)
+            <strong>Typomm 암호화 파일(<code>.typomm</code>) 저장·열기 지원</strong>: 설정창에서 지정한 비밀번호(초기값 <code>typomm</code>)를 시드로 AES-256-GCM 암호화해 저장하며, 다른 비밀번호로 암호화된 문서를 열 때는 비밀번호 입력창이 표시됩니다.
           </li>
           <li>
-            <strong>내용 검색 대상 확장자 파일 열기 지원</strong>: <code>.py</code>, <code>.rs</code>, <code>.ts</code>, <code>.tsx</code>, <code>.yaml</code>, <code>.sh</code>, <code>.sql</code>, <code>.log</code> 등 설정의 내용 검색 확장자에 포함된 파일도 폴더 트리·빠른 열기·파일 열기 대화상자에서 바로 열어 편집할 수 있습니다.
+            <strong>타자기 스크롤 중앙 고정 위치 개선</strong>: 중앙 고정 모드에서 페이지 기본 위치를 안쪽 좌측 여백만큼 왼쪽으로 이동시켜 시선과 여백 균형을 개선했습니다.
           </li>
           <li>
-            <strong>파인더(탐색기) 파일 열기 라우팅 버그 수정</strong>: 파인더에서 파일을 열 때 새 창이 뜨면서 파일이 열리지 않던 타이밍/경로 매칭 버그를 수정했습니다. 현재 열린 폴더 안의 파일은 기존 창에서 열고, 다른 폴더의 파일은 해당 폴더를 연 상태에서 새 창으로 바로 엽니다.
-          </li>
-          <li>
-            <strong>macOS 자동 설치 스크립트 및 번들 서명 검증 개선</strong>: 터미널 원클릭 설치/업그레이드 스크립트(<code>install.sh</code>)를 추가하고 릴리즈 빌드 시 <code>codesign --verify --deep --strict</code> 검증을 수행하도록 개선했습니다.
+            <strong>Unsplash 배경 출처 링크 클릭 버그 수정</strong>: 커스텀 배경 우하단 및 설정창의 Unsplash 작성자·사이트 링크를 클릭하면 기본 브라우저에서 정상적으로 열리도록 수정했습니다.
           </li>
         </ul>
       </section>
