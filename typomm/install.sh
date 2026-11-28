@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="0.2.17"
+VERSION_JSON_URL="https://imredcat.github.io/typomm/version.json"
+FALLBACK_VERSION="0.2.23"
+VERSION="$(curl -fsSL "${VERSION_JSON_URL}" 2>/dev/null | sed -n 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' | head -n 1 || true)"
+VERSION="${VERSION:-${FALLBACK_VERSION}}"
 DMG_URL="https://imredcat.github.io/typomm/downloads/Typomm_${VERSION}_aarch64.dmg"
 TMP_DMG="$(mktemp -t typomm_install.XXXXXX).dmg"
 MOUNT_POINT="/Volumes/Typomm"
